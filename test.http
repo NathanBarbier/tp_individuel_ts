@@ -1,0 +1,83 @@
+### Créer un film
+
+POST http://localhost:3000/api/films
+Content-Type: application/json
+
+{
+    "title": "Interstellar",
+    "releaseYear": 2014,
+    "genre": "Science Fiction",
+    "directors": [
+        {
+            "name": "Christopher Nolan",
+            "birthDate": "1970-07-30",
+            "biography": "Christopher Edward Nolan is a British-American film director, producer, and screenwriter."
+        }
+    ]
+}
+
+### Obtenir tous les films
+
+GET http://localhost:3000/api/films
+
+### Obtenir un film par ID
+
+GET http://localhost:3000/api/films/{{filmId}}
+
+### Mettre à jour un film par ID
+
+PUT http://localhost:3000/api/films/{{filmId}}
+Content-Type: application/json
+
+{
+    "title": "Interstellar",
+    "releaseYear": 2014,
+    "genre": "Science Fiction",
+    "directors": [
+        {
+            "name": "Christopher Nolan",
+            "birthDate": "1970-07-30",
+            "biography": "Christopher Edward Nolan is a British-American film director, producer, and screenwriter."
+        }
+    ]
+}
+
+### Supprimer un film par ID
+
+DELETE http://localhost:3000/api/films/
+
+### Créer une session
+
+POST http://localhost:3000/api/sessions
+Content-Type: application/json
+
+{
+    "film": "{{filmId}}",
+    "date": "2024-04-20",
+    "time": "20:00",
+    "availableSeats": 100
+}
+
+### Obtenir toutes les sessions
+
+GET http://localhost:3000/api/sessions
+
+### Obtenir une session par ID
+
+GET http://localhost:3000/api/sessions/
+
+### Mettre à jour une session par ID
+
+PUT http://localhost:3000/api/sessions/
+Content-Type: application/json
+
+{
+    "film": "",
+    "date": "2024-04-20",
+    "time": "20:00",
+    "availableSeats": 100
+}
+
+### Supprimer une session par ID
+
+DELETE http://localhost:3000/api/sessions/
