@@ -22,11 +22,11 @@ GET http://localhost:3000/api/film
 
 ### Obtenir un film par ID
 
-GET http://localhost:3000/api/film/{{filmId}}
+GET http://localhost:3000/api/film/661fed319619c8e7373c4ee1
 
 ### Mettre à jour un film par ID
 
-PUT http://localhost:3000/api/film/{{filmId}}
+PUT http://localhost:3000/api/film/661fee209619c8e7373c4ee1
 Content-Type: application/json
 
 {
@@ -44,7 +44,7 @@ Content-Type: application/json
 
 ### Supprimer un film par ID
 
-DELETE http://localhost:3000/api/film/
+DELETE http://localhost:3000/api/film/661fee209619c8e7373c4ee1
 
 ### Créer une session
 
@@ -52,7 +52,18 @@ POST http://localhost:3000/api/session
 Content-Type: application/json
 
 {
-    "film": "{{filmId}}",
+    "film": {
+        "title": "Interstellar",
+        "releaseYear": 2014,
+        "genre": "Science Fiction",
+        "directors": [
+            {
+                "name": "Christopher Nolan",
+                "birthDate": "1970-07-30",
+                "biography": "Christopher Edward Nolan is a British-American film director, producer, and screenwriter."
+            }
+        ]
+    },
     "date": "2024-04-20",
     "time": "20:00",
     "availableSeats": 100
@@ -64,20 +75,66 @@ GET http://localhost:3000/api/session
 
 ### Obtenir une session par ID
 
-GET http://localhost:3000/api/session/
+GET http://localhost:3000/api/session/6620053516d79160b20185a0
 
 ### Mettre à jour une session par ID
 
-PUT http://localhost:3000/api/session/
+PUT http://localhost:3000/api/session/6620053516d79160b20185a0
 Content-Type: application/json
 
 {
-    "film": "",
+    "film": {
+        "title": "Interstellar",
+        "releaseYear": 2014,
+        "genre": "Science Fiction",
+        "directors": [
+            {
+                "name": "Christopher Nolan",
+                "birthDate": "1970-07-30",
+                "biography": "Christopher Edward Nolan is a British-American film director, producer, and screenwriter."
+            }
+        ]
+    },
     "date": "2024-04-20",
-    "time": "20:00",
+    "time": "35:00",
     "availableSeats": 100
 }
 
 ### Supprimer une session par ID
 
-DELETE http://localhost:3000/api/session/
+DELETE http://localhost:3000/api/session/6620053516d79160b20185a0
+
+### Créer un réalisateur
+
+POST http://localhost:3000/api/director
+Content-Type: application/json
+
+{
+    "name": "Quentin Tarantino",
+    "birthDate": "1963-03-27",
+    "biography": "Quentin Jerome Tarantino is an American film director, screenwriter, producer, and actor."
+}
+
+### Obtenir tous les réalisateurs
+
+GET http://localhost:3000/api/director
+
+### Obtenir un réalisateur par ID
+
+GET http://localhost:3000/api/director/662005b916d79160b20185a4
+
+### Mettre à jour un réalisateur par ID
+
+PUT http://localhost:3000/api/director/662005b916d79160b20185a4
+Content-Type: application/json
+
+{
+    "name": "Quentin Tarantinette",
+    "birthDate": "1963-03-27",
+    "biography": "Quentin Jerome Tarantino is an American film director, screenwriter, producer, and actor."
+}
+
+### Supprimer un réalisateur par ID
+
+DELETE http://localhost:3000/api/director/662005b916d79160b20185a4
+

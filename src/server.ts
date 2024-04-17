@@ -1,6 +1,6 @@
-import filmRoutes from "./routes/FilmRoutes";
-import directorRoutes from "./routes/DirectorRoutes";
-import sessionRoutes from "./routes/SessionRoutes";
+import filmRoutes from "./routes/filmRoutes";
+import directorRoutes from "./routes/directorRoutes";
+import sessionRoutes from "./routes/sessionRoutes";
 import express from "express";
 
 const mongoose = require('mongoose');
