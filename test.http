@@ -1,10 +1,10 @@
 ### Créer un film
 
-POST http://localhost:3000/api/films
+POST http://localhost:3000/api/film
 Content-Type: application/json
 
 {
-    "title": "Interstellar",
+    "title": "Interstellarer",
     "releaseYear": 2014,
     "genre": "Science Fiction",
     "directors": [
@@ -18,15 +18,15 @@ Content-Type: application/json
 
 ### Obtenir tous les films
 
-GET http://localhost:3000/api/films
+GET http://localhost:3000/api/film
 
 ### Obtenir un film par ID
 
-GET http://localhost:3000/api/films/{{filmId}}
+GET http://localhost:3000/api/film/{{filmId}}
 
 ### Mettre à jour un film par ID
 
-PUT http://localhost:3000/api/films/{{filmId}}
+PUT http://localhost:3000/api/film/{{filmId}}
 Content-Type: application/json
 
 {
@@ -44,11 +44,11 @@ Content-Type: application/json
 
 ### Supprimer un film par ID
 
-DELETE http://localhost:3000/api/films/
+DELETE http://localhost:3000/api/film/
 
 ### Créer une session
 
-POST http://localhost:3000/api/sessions
+POST http://localhost:3000/api/session
 Content-Type: application/json
 
 {
@@ -60,15 +60,15 @@ Content-Type: application/json
 
 ### Obtenir toutes les sessions
 
-GET http://localhost:3000/api/sessions
+GET http://localhost:3000/api/session
 
 ### Obtenir une session par ID
 
-GET http://localhost:3000/api/sessions/
+GET http://localhost:3000/api/session/
 
 ### Mettre à jour une session par ID
 
-PUT http://localhost:3000/api/sessions/
+PUT http://localhost:3000/api/session/
 Content-Type: application/json
 
 {
@@ -80,4 +80,4 @@ Content-Type: application/json
 
 ### Supprimer une session par ID
 
-DELETE http://localhost:3000/api/sessions/
+DELETE http://localhost:3000/api/session/
